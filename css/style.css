@@ -18,6 +18,7 @@ img{
 
 .slide{
   display: flex;
+  transition: 1s;
 }
 
 .slide li{
