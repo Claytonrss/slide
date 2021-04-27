@@ -5,8 +5,8 @@ export class Slide {
     this.slide = document.querySelector(slide)
     this.wrapper = document.querySelector(wrapper)
     this.distances = { finalPosition: 0, startX: 0, movement: 0 }
-    this.activeClass = 'active';
-    this.changeEvent = new Event('changeEvent');
+    this.activeClass = 'active'
+    this.changeEvent = new Event('changeEvent')
   }
 
   transition(active) {
@@ -101,8 +101,8 @@ export class Slide {
     this.moveSlide(activeSlide.position)
     this.slideIndexNav(index)
     this.distances.finalPosition = activeSlide.position
-    this.changeActiveClass();
-    this.wrapper.dispatchEvent(this.changeEvent);
+    this.changeActiveClass()
+    this.wrapper.dispatchEvent(this.changeEvent)
   }
 
   changeActiveClass() {
@@ -199,7 +199,7 @@ export class SlideNav extends Slide {
     this.control = document.querySelector(customControl) || this.createControl()
     this.controlArray = [...this.control.children]
     this.controlArray.forEach(this.eventControl)
-    this.activeControlItem();
+    this.activeControlItem()
   }
 
   bindEventsControl() {
